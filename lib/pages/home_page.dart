@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pdf_notes_app/components/booksLink/dsa_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/java_book_page.dart';
 import 'package:pdf_notes_app/components/notesLink/c_page.dart';
 import 'package:pdf_notes_app/components/notesLink/python_page.dart';
 import 'package:pdf_notes_app/pages/books_page.dart';
@@ -288,7 +290,9 @@ class HomePage extends StatelessWidget {
                             backgroundColor: Colors.grey[600],
                           ),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>JavaBooksPage()));
+                          },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
@@ -306,12 +310,12 @@ class HomePage extends StatelessWidget {
                     children: [
                       Expanded(
                           child:
-                              Image.asset('assets/images/booksImages/c#.png')),
+                              Image.asset('assets/images/booksImages/DSA.png')),
                       const SizedBox(
                         height: 5,
                       ),
                       const Text(
-                        'C#',
+                        'Data Structure & Algorithms',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w600),
                       ),
@@ -324,7 +328,9 @@ class HomePage extends StatelessWidget {
                             backgroundColor: Colors.grey[600],
                           ),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>DSABookPage()));
+                          },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),

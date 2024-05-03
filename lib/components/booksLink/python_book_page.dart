@@ -16,7 +16,7 @@ class _PythonBookPageState extends State<PythonBookPage> {
     super.initState();
     pdfControllerPinch = PdfControllerPinch(
         document: PdfDocument.openAsset(
-            'assets/pdf/booksPdf/Python Machine Learning.pdf'));
+            'assets/pdf/booksPdf/Python_Machine_Learning.pdf'));
   }
 
   @override

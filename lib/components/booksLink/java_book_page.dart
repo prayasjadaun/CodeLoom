@@ -11,20 +11,17 @@ class JavaBooksPage extends StatefulWidget {
 class _JavaBooksPageState extends State<JavaBooksPage> {
   late PdfControllerPinch pdfControllerPinch;
 
-
   @override
   void initState() {
     super.initState();
-    pdfControllerPinch = PdfControllerPinch(
-        document: PdfDocument.openAsset(
-            'assets/pdf/booksPdf/Java For Dummies.pdf'));
+    pdfControllerPinch = PdfControllerPinch(document: PdfDocument.openAsset('assets/pdf/booksPdf/Java_For_Dummies.pdf'));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Java'),
+          title: const Text('Java For Dummies'),
         ),
         body: _buildUI()
     );

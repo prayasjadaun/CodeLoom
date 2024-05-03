@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:pdf_notes_app/components/booksLink/algorithms_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/android_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/codingInerview_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/dsa_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/grokingAlgo_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/ios_book_page.dart';
 import 'package:pdf_notes_app/components/booksLink/java_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/machine_learning_book_page.dart';
 import 'package:pdf_notes_app/components/booksLink/python_book_page.dart';
 
+import '../components/booksLink/statistical_book_page.dart';
 import 'courses_page.dart';
 import 'home_page.dart';
 import 'notes_page.dart';
@@ -198,12 +206,12 @@ class _BooksPageState extends State<BooksPage> {
                     children: [
                       Expanded(
                           child:
-                          Image.asset('assets/images/booksImages/c#.png')),
+                          Image.asset('assets/images/booksImages/ElementsOf.png')),
                       const SizedBox(
                         height: 5,
                       ),
                       const Text(
-                        'C#',
+                        'Elements Of Statistical Learning',
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.w600),
                       ),
@@ -216,7 +224,9 @@ class _BooksPageState extends State<BooksPage> {
                             backgroundColor: Colors.grey[600],
                           ),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> StatisticalBookPage()));
+                          },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
@@ -298,7 +308,9 @@ class _BooksPageState extends State<BooksPage> {
                             backgroundColor: Colors.grey[600],
                           ),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> AlgorithmBookPage()));
+                          },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
@@ -342,7 +354,9 @@ class _BooksPageState extends State<BooksPage> {
                             backgroundColor: Colors.grey[600],
                           ),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => AndroidBookPage()));
+                          },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
@@ -378,7 +392,9 @@ class _BooksPageState extends State<BooksPage> {
                             backgroundColor: Colors.grey[600],
                           ),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> DSABookPage()));
+                          },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
@@ -422,7 +438,9 @@ class _BooksPageState extends State<BooksPage> {
                             backgroundColor: Colors.grey[600],
                           ),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> CodingInterviewBookPage()));
+                          },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
@@ -458,7 +476,93 @@ class _BooksPageState extends State<BooksPage> {
                             backgroundColor: Colors.grey[600],
                           ),
                           color: Colors.white,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> GrokkingAlgoBookPage()));
+                          },
+                          icon: const Icon(Icons.arrow_forward_outlined)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(top: 20, bottom: 15),
+                  height: 300,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                          child: Image.asset(
+                              'assets/images/booksImages/HandsOnMachine.png')),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Text(
+                        'Hands On Machine Learning',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      IconButton(
+                          iconSize: 30,
+                          style: IconButton.styleFrom(
+                            backgroundColor: Colors.grey[600],
+                          ),
+                          color: Colors.white,
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>MachineLearningBookPage()));
+                          },
+                          icon: const Icon(Icons.arrow_forward_outlined)),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.only(top: 20, bottom: 15),
+                  height: 300,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                          child:
+                          Image.asset('assets/images/booksImages/IOS.png')),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Text(
+                        'IOS Programming',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      IconButton(
+                          iconSize: 30,
+                          style: IconButton.styleFrom(
+                            backgroundColor: Colors.grey[600],
+                          ),
+                          color: Colors.white,
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> IOSBookPage()));
+                          },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
