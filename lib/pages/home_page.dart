@@ -127,10 +127,15 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 10.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
                   'Handwritten Notes',
                   style: TextStyle(fontWeight: FontWeight.w900, fontSize: 25),
+                ),
+                const Padding(
+                  padding: EdgeInsets.only(right: 25),
+                  child: Text('by Code With Harry',style: TextStyle(color: Colors.grey, fontSize: 10),),
                 ),
                 GestureDetector(
                   onTap: () {

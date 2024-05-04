@@ -6,7 +6,7 @@ class CoursesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:Text('Under Construction'),
+      child:Center(child: Text('Under Construction')),
     );
   }
 }

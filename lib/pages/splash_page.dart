@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+import 'home_page.dart';
+
+class SplashPage extends StatefulWidget {
+  const SplashPage({super.key});
+
+  @override
+  State<SplashPage> createState() => _SplashPageState();
+}
+
+class _SplashPageState extends State<SplashPage> {
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      backgroundColor: Colors.transparent,
+      body:Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('C O D E L O O M', style: TextStyle(color: Colors.deepPurple, fontSize: 50, fontWeight: FontWeight.w900),),
+              Image.asset('assets/images/libar.jpg',height: 400,),
+              const SizedBox(height: 40,),
+              const Text('Welcome To CodeLoom', style: TextStyle(color:Colors.deepPurple, fontSize: 25, fontWeight: FontWeight.w900 ),),
+              const SizedBox(height: 10,),
+              const Text('Your Library App', style: TextStyle(color:Colors.deepPurple, fontSize: 18, fontWeight: FontWeight.w500 ),),
+              const SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                onTap:()=> Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) =>  const HomePage())),
+                child: Container(
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      color: Colors.deepPurple
+                  ),
+                  padding: const EdgeInsets.all(18),
+                  child: Center(
+                    child: Text('Enter Library',
+                      style: TextStyle(color: Colors.grey.shade200, fontWeight: FontWeight.bold, fontSize: 20),),
+                  ),
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

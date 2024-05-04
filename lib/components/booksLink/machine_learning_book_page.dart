@@ -23,7 +23,7 @@ class _MachineLearningBookPageState extends State<MachineLearningBookPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text('Hands-On Machine Learning with Scikit-Learn,Keras.pdf'),
+          title: const Text('Hands-On Machine Learning with Scikit-Learn,Keras'),
         ),
         body: _buildUI());
   }
