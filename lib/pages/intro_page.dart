@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 import 'home_page.dart';
 
-class SplashPage extends StatefulWidget {
-  const SplashPage({super.key});
+class IntroPage extends StatefulWidget {
+  const IntroPage({super.key});
 
   @override
-  State<SplashPage> createState() => _SplashPageState();
+  State<IntroPage> createState() => _IntroPageState();
 }
 
-class _SplashPageState extends State<SplashPage> {
+class _IntroPageState extends State<IntroPage> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(

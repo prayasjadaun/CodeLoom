@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pdf_notes_app/pages/home_page.dart';
-import 'package:pdf_notes_app/pages/splash_page.dart';
+import 'package:pdf_notes_app/pages/intro_page.dart';
 
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SplashPage(),
+      home: IntroPage(),
       // HomePage(),
 
     );
