@@ -46,18 +46,10 @@ class _BooksPageState extends State<BooksPage> {
                       fontWeight: FontWeight.w900),
                 ),
               ),
-              ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.deepPurple)),
-                  onPressed: () {},
-                  child: const Text(
-                    'Login',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w900),
-                  )),
+              const CircleAvatar(
+                radius: 30,
+                backgroundImage: AssetImage('assets/images/CodeLoom.png'),
+              ),
             ],
           )),
       body: ListView(

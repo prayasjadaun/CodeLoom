@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       appBar: AppBar(
           backgroundColor: Colors.white,
           centerTitle: true,
@@ -25,26 +26,18 @@ class HomePage extends StatelessWidget {
                   Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) => const HomePage()));
                 },
-                child: const Text(
+                child: Text(
                   '</> CodeWithPrayas',
                   style: TextStyle(
-                      color: Colors.deepPurple,
+                      color: Colors.deepPurple[900],
                       fontSize: 24,
                       fontWeight: FontWeight.w900),
                 ),
               ),
-              ElevatedButton(
-                  style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all(Colors.deepPurple)),
-                  onPressed: () {},
-                  child: const Text(
-                    'Login',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w900),
-                  )),
+             const CircleAvatar(
+               radius: 30,
+               backgroundImage: AssetImage('assets/images/CodeLoom.png'),
+             ),
             ],
           )),
       body: ListView(
@@ -65,18 +58,18 @@ class HomePage extends StatelessWidget {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) => const HomePage()));
                     },
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.home_filled,
-                      color: Colors.deepPurple,
+                      color: Colors.deepPurple[900],
                     )),
                 GestureDetector(
                   onTap: () {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => const NotesPage()));
                   },
-                  child: const Text('Notes',
+                  child: Text('Notes',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
@@ -86,9 +79,9 @@ class HomePage extends StatelessWidget {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => const BooksPage()));
                   },
-                  child: const Text('Books',
+                  child: Text('Books',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
@@ -98,16 +91,16 @@ class HomePage extends StatelessWidget {
                     Navigator.pushReplacement(context,
                         MaterialPageRoute(builder: (context) => const CoursesPage()));
                   },
-                  child: const Text('Courses',
+                  child: Text('Courses',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
                 ),
-                const Icon(
+                 Icon(
                   Icons.search,
-                  color: Colors.deepPurple,
+                  color: Colors.deepPurple[900],
                 ),
               ],
             ),
@@ -119,6 +112,17 @@ class HomePage extends StatelessWidget {
               color: Colors.grey,
             ),
           ),
+          const SizedBox(height: 10,),
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 7),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
+            decoration: BoxDecoration(
+              color: Colors.deepPurple[900],
+              borderRadius: BorderRadius.circular(30)
+            ),
+              child: const Center(child: Text('C O D E L O O M', style: TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.w200),))),
+          const SizedBox(height: 10,),
+          Image.asset('assets/images/book.jpg'),
           //-----------------------FOR NOTES--------------------------------------------------------------------------------------------------------------------
           const SizedBox(
             height: 10,
@@ -224,7 +228,7 @@ class HomePage extends StatelessWidget {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>CPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const CPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined))
                     ],
@@ -296,7 +300,7 @@ class HomePage extends StatelessWidget {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>JavaBooksPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const JavaBooksPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -334,7 +338,7 @@ class HomePage extends StatelessWidget {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>DSABookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const DSABookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
