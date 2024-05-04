@@ -35,13 +35,22 @@ class _NotesPageState extends State<NotesPage> {
                       MaterialPageRoute(
                           builder: (context) => const HomePage()));
                 },
-                child: Text(
-                  '</> CodeWithPrayas',
-                  style: TextStyle(
-                      color: Colors.deepPurple[900],
-                      fontSize: 24,
-                      fontWeight: FontWeight.w900),
-                ),
+                child: Row(children: [
+                  Icon(
+                    Icons.menu_book_rounded,
+                    color: Colors.deepPurple[900],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    'CodeLoom',
+                    style: TextStyle(
+                        color: Colors.deepPurple[900],
+                        fontSize: 24,
+                        fontWeight: FontWeight.w900),
+                  ),
+                ]),
               ),
               const CircleAvatar(
                 radius: 30,
