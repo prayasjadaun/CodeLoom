@@ -35,10 +35,10 @@ class _NotesPageState extends State<NotesPage> {
                       MaterialPageRoute(
                           builder: (context) => const HomePage()));
                 },
-                child: const Text(
+                child: Text(
                   '</> CodeWithPrayas',
                   style: TextStyle(
-                      color: Colors.deepPurple,
+                      color: Colors.deepPurple[900],
                       fontSize: 24,
                       fontWeight: FontWeight.w900),
                 ),
@@ -70,9 +70,9 @@ class _NotesPageState extends State<NotesPage> {
                           MaterialPageRoute(
                               builder: (context) => const HomePage()));
                     },
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.home_filled,
-                      color: Colors.deepPurple,
+                      color: Colors.deepPurple[900],
                     )),
                 GestureDetector(
                   onTap: () {
@@ -81,9 +81,9 @@ class _NotesPageState extends State<NotesPage> {
                         MaterialPageRoute(
                             builder: (context) => const NotesPage()));
                   },
-                  child: const Text('Notes',
+                  child: Text('Notes',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
@@ -95,9 +95,9 @@ class _NotesPageState extends State<NotesPage> {
                         MaterialPageRoute(
                             builder: (context) => const BooksPage()));
                   },
-                  child: const Text('Books',
+                  child: Text('Books',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
@@ -109,16 +109,16 @@ class _NotesPageState extends State<NotesPage> {
                         MaterialPageRoute(
                             builder: (context) => const CoursesPage()));
                   },
-                  child: const Text('Courses',
+                  child: Text('Courses',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
                 ),
-                const Icon(
+                Icon(
                   Icons.search,
-                  color: Colors.deepPurple,
+                  color: Colors.deepPurple[900],
                 ),
               ],
             ),
@@ -130,6 +130,8 @@ class _NotesPageState extends State<NotesPage> {
               color: Colors.grey,
             ),
           ),
+          // SizedBox(height: 10,),
+          Image.asset('assets/images/Notes.jpg'),
           const SizedBox(
             height: 5,
           ),
@@ -243,7 +245,8 @@ class _NotesPageState extends State<NotesPage> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => const CPage()));
+                                            builder: (context) =>
+                                                const CPage()));
                                   },
                                   icon:
                                       const Icon(Icons.arrow_forward_outlined))
@@ -336,7 +339,8 @@ class _NotesPageState extends State<NotesPage> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => const JavaPage()));
+                                            builder: (context) =>
+                                                const JavaPage()));
                                   },
                                   icon:
                                       const Icon(Icons.arrow_forward_outlined))
@@ -386,7 +390,8 @@ class _NotesPageState extends State<NotesPage> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => const HtmlPage()));
+                                            builder: (context) =>
+                                                const HtmlPage()));
                                   },
                                   icon:
                                       const Icon(Icons.arrow_forward_outlined))
@@ -428,7 +433,8 @@ class _NotesPageState extends State<NotesPage> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => const CssPage()));
+                                            builder: (context) =>
+                                                const CssPage()));
                                   },
                                   icon:
                                       const Icon(Icons.arrow_forward_outlined))
@@ -478,7 +484,8 @@ class _NotesPageState extends State<NotesPage> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => const JSPage()));
+                                            builder: (context) =>
+                                                const JSPage()));
                                   },
                                   icon:
                                       const Icon(Icons.arrow_forward_outlined))
@@ -520,7 +527,8 @@ class _NotesPageState extends State<NotesPage> {
                                     Navigator.push(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => const DSAPage()));
+                                            builder: (context) =>
+                                                const DSAPage()));
                                   },
                                   icon:
                                       const Icon(Icons.arrow_forward_outlined))

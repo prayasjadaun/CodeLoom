@@ -48,8 +48,8 @@ class _IntroPageState extends State<IntroPage> {
                 'Your Library App',
                 style: TextStyle(
                     color: Colors.deepPurple,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w400),
+                    fontSize: 25,
+                    fontWeight: FontWeight.w200),
               ),
               const SizedBox(
                 height: 20,

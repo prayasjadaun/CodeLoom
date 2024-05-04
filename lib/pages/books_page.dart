@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:pdf_notes_app/components/booksLink/algorithms_book_page.dart';
 import 'package:pdf_notes_app/components/booksLink/android_book_page.dart';
 import 'package:pdf_notes_app/components/booksLink/codingInerview_book_page.dart';
@@ -35,13 +37,15 @@ class _BooksPageState extends State<BooksPage> {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.pushReplacement(context,
-                      MaterialPageRoute(builder: (context) => const HomePage()));
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomePage()));
                 },
-                child: const Text(
+                child: Text(
                   '</> CodeWithPrayas',
                   style: TextStyle(
-                      color: Colors.deepPurple,
+                      color: Colors.deepPurple[900],
                       fontSize: 24,
                       fontWeight: FontWeight.w900),
                 ),
@@ -68,51 +72,60 @@ class _BooksPageState extends State<BooksPage> {
               children: [
                 IconButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomePage()));
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const HomePage()));
                     },
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.home_filled,
-                      color: Colors.deepPurple,
+                      color: Colors.deepPurple[900],
                     )),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => const NotesPage()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const NotesPage()));
                   },
-                  child: const Text('Notes',
+                  child: Text('Notes',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => const BooksPage()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const BooksPage()));
                   },
-                  child: const Text('Books',
+                  child: Text('Books',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (context) => const CoursesPage()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CoursesPage()));
                   },
-                  child: const Text('Courses',
+                  child: Text('Courses',
                       style: TextStyle(
-                        color: Colors.deepPurple,
+                        color: Colors.deepPurple[900],
                         fontWeight: FontWeight.w700,
                         fontSize: 20,
                       )),
                 ),
-                const Icon(
+                Icon(
                   Icons.search,
-                  color: Colors.deepPurple,
+                  color: Colors.deepPurple[900],
                 ),
               ],
             ),
@@ -124,6 +137,7 @@ class _BooksPageState extends State<BooksPage> {
               color: Colors.grey,
             ),
           ),
+          Image.asset('assets/images/read.jpg'),
           const SizedBox(
             height: 5,
           ),
@@ -143,7 +157,9 @@ class _BooksPageState extends State<BooksPage> {
               ],
             ),
           ),
-         const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
             child: Row(
@@ -154,36 +170,22 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => JavaBooksPage())),
                           child: Image.asset(
-                              'assets/images/booksImages/java_dummies.png')),
-                      const SizedBox(
-                        height: 5,
+                              'assets/images/booksImages/java_dummies.png'),
+                        ),
                       ),
-                      const Text(
-                        'JAVA',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const JavaBooksPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -192,36 +194,23 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
-                          child:
-                          Image.asset('assets/images/booksImages/ElementsOf.png')),
-                      const SizedBox(
-                        height: 5,
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const StatisticalBookPage())),
+                          child: Image.asset(
+                              'assets/images/booksImages/ElementsOf.png'),
+                        ),
                       ),
-                      const Text(
-                        'Elements Of Statistical Learning',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const StatisticalBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -238,36 +227,22 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const PythonBookPage())),
                           child: Image.asset(
-                              'assets/images/booksImages/python.png')),
-                      const SizedBox(
-                        height: 5,
+                              'assets/images/booksImages/Pythonmachinelearning.png'),
+                        ),
                       ),
-                      const Text(
-                        'Python\nProgramming',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const PythonBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -276,36 +251,23 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
-                          child:
-                          Image.asset('assets/images/booksImages/Algorithms.png')),
-                      const SizedBox(
-                        height: 5,
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const AlgorithmBookPage())),
+                          child: Image.asset(
+                              'assets/images/booksImages/Algorithms.png'),
+                        ),
                       ),
-                      const Text(
-                        'Algorithms',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const AlgorithmBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -322,36 +284,23 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const AndroidBookPage())),
                           child: Image.asset(
-                              'assets/images/booksImages/Android Programming.png')),
-                      const SizedBox(
-                        height: 5,
+                              'assets/images/booksImages/Android Programming.png'),
+                        ),
                       ),
-                      const Text(
-                        'Android\nProgramming',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const AndroidBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -360,36 +309,22 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const DSABookPage())),
                           child:
-                          Image.asset('assets/images/booksImages/DSA.png')),
-                      const SizedBox(
-                        height: 5,
+                              Image.asset('assets/images/booksImages/DSA.png'),
+                        ),
                       ),
-                      const Text(
-                        'DSA',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const DSABookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -406,36 +341,23 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const CodingInterviewBookPage())),
                           child: Image.asset(
-                              'assets/images/booksImages/Coding Interview.png')),
-                      const SizedBox(
-                        height: 5,
+                              'assets/images/booksImages/Coding Interview.png'),
+                        ),
                       ),
-                      const Text(
-                        'Coding Interview',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const CodingInterviewBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -444,36 +366,23 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
-                          child:
-                          Image.asset('assets/images/booksImages/grokking Algo.png')),
-                      const SizedBox(
-                        height: 5,
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const GrokkingAlgoBookPage())),
+                          child: Image.asset(
+                              'assets/images/booksImages/grokking Algo.png'),
+                        ),
                       ),
-                      const Text(
-                        'Grokking Algorithms',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const GrokkingAlgoBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -490,36 +399,23 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const MachineLearningBookPage())),
                           child: Image.asset(
-                              'assets/images/booksImages/HandsOnMachine.png')),
-                      const SizedBox(
-                        height: 5,
+                              'assets/images/booksImages/HandsOnMachine.png'),
+                        ),
                       ),
-                      const Text(
-                        'Hands On Machine Learning',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const MachineLearningBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -528,36 +424,22 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const IOSBookPage())),
                           child:
-                          Image.asset('assets/images/booksImages/IOS.png')),
-                      const SizedBox(
-                        height: 5,
+                              Image.asset('assets/images/booksImages/IOS.png'),
+                        ),
                       ),
-                      const Text(
-                        'IOS Programming',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const IOSBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -574,36 +456,23 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const PatternBookPage())),
                           child: Image.asset(
-                              'assets/images/booksImages/PatternRecog.png')),
-                      const SizedBox(
-                        height: 5,
+                              'assets/images/booksImages/PatternRecog.png'),
+                        ),
                       ),
-                      const Text(
-                        'Pattern Recognition',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const PatternBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
@@ -612,36 +481,23 @@ class _BooksPageState extends State<BooksPage> {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Expanded(
-                          child:
-                          Image.asset('assets/images/booksImages/Minnig.jpg')),
-                      const SizedBox(
-                        height: 5,
+                        child: GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                      const MiningBookPage())),
+                          child: Image.asset(
+                              'assets/images/booksImages/Minnig.jpg'),
+                        ),
                       ),
-                      const Text(
-                        'Mining Of Massive Datasets',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const MiningBookPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
                   ),
                 ),
