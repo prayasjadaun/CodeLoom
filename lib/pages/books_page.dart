@@ -7,6 +7,8 @@ import 'package:pdf_notes_app/components/booksLink/grokingAlgo_book_page.dart';
 import 'package:pdf_notes_app/components/booksLink/ios_book_page.dart';
 import 'package:pdf_notes_app/components/booksLink/java_book_page.dart';
 import 'package:pdf_notes_app/components/booksLink/machine_learning_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/mining_book_page.dart';
+import 'package:pdf_notes_app/components/booksLink/pattern_book_page.dart';
 import 'package:pdf_notes_app/components/booksLink/python_book_page.dart';
 
 import '../components/booksLink/statistical_book_page.dart';
@@ -74,7 +76,7 @@ class _BooksPageState extends State<BooksPage> {
               children: [
                 IconButton(
                     onPressed: () {
-                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomePage()));
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomePage()));
                     },
                     icon: const Icon(
                       Icons.home_filled,
@@ -225,7 +227,7 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> StatisticalBookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const StatisticalBookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -271,7 +273,7 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => PythonBookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const PythonBookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -309,7 +311,7 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> AlgorithmBookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const AlgorithmBookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -355,7 +357,7 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => AndroidBookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const AndroidBookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -393,7 +395,7 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> DSABookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const DSABookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -439,7 +441,7 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> CodingInterviewBookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const CodingInterviewBookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -477,7 +479,7 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> GrokkingAlgoBookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const GrokkingAlgoBookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -523,7 +525,7 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) =>MachineLearningBookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const MachineLearningBookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
@@ -561,7 +563,91 @@ class _BooksPageState extends State<BooksPage> {
                           ),
                           color: Colors.white,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> IOSBookPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const IOSBookPage()));
+                          },
+                          icon: const Icon(Icons.arrow_forward_outlined)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  padding: const EdgeInsets.only(top: 20, bottom: 15),
+                  height: 300,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                          child: Image.asset(
+                              'assets/images/booksImages/PatternRecog.png')),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Text(
+                        'Pattern Recognition',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      IconButton(
+                          iconSize: 30,
+                          style: IconButton.styleFrom(
+                            backgroundColor: Colors.grey[600],
+                          ),
+                          color: Colors.white,
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>const PatternBookPage()));
+                          },
+                          icon: const Icon(Icons.arrow_forward_outlined)),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: const EdgeInsets.only(top: 20, bottom: 15),
+                  height: 300,
+                  width: 200,
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                          child:
+                          Image.asset('assets/images/booksImages/Minnig.jpg')),
+                      const SizedBox(
+                        height: 5,
+                      ),
+                      const Text(
+                        'Mining Of Massive Datasets',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.w600),
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      IconButton(
+                          iconSize: 30,
+                          style: IconButton.styleFrom(
+                            backgroundColor: Colors.grey[600],
+                          ),
+                          color: Colors.white,
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const MiningBookPage()));
                           },
                           icon: const Icon(Icons.arrow_forward_outlined)),
                     ],
