@@ -169,17 +169,19 @@ class _BooksPageState extends State<BooksPage> {
           const SizedBox(
             height: 10,
           ),
+          // --------------------BODY-----------------------------------------------------------------------------------
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -200,10 +202,11 @@ class _BooksPageState extends State<BooksPage> {
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -229,14 +232,15 @@ class _BooksPageState extends State<BooksPage> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -257,10 +261,11 @@ class _BooksPageState extends State<BooksPage> {
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -286,14 +291,15 @@ class _BooksPageState extends State<BooksPage> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -315,10 +321,11 @@ class _BooksPageState extends State<BooksPage> {
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -343,14 +350,15 @@ class _BooksPageState extends State<BooksPage> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -372,10 +380,11 @@ class _BooksPageState extends State<BooksPage> {
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -401,14 +410,15 @@ class _BooksPageState extends State<BooksPage> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -430,10 +440,11 @@ class _BooksPageState extends State<BooksPage> {
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -458,14 +469,15 @@ class _BooksPageState extends State<BooksPage> {
           Padding(
             padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 8),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -487,10 +499,11 @@ class _BooksPageState extends State<BooksPage> {
                 ),
                 Container(
                   padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 300,
-                  width: 200,
+                  height: 250,
+                  width: 180,
                   decoration: BoxDecoration(
                     color: Colors.grey[300],
+                    border: Border.all(color: Colors.black),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(

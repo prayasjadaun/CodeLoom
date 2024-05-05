@@ -139,6 +139,7 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Container(
+                    width: 270,
                       padding: const EdgeInsets.symmetric(vertical: 10),
                       margin: const EdgeInsets.symmetric(horizontal: 20),
                       decoration: BoxDecoration(
@@ -149,10 +150,10 @@ class HomePage extends StatelessWidget {
                         'CodeWithPrayas',
                         style: TextStyle(
                             color: Colors.white,
-                            fontSize: 40,
+                            fontSize: 30,
                             fontWeight: FontWeight.w200),
                       ))),
-                  const SizedBox(height: 228),
+                  const SizedBox(height: 350),
                   const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -160,7 +161,7 @@ class HomePage extends StatelessWidget {
                         'Welcome to ',
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 25,
+                          fontSize: 20,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -168,7 +169,7 @@ class HomePage extends StatelessWidget {
                         'CodeLoom ',
                         style: TextStyle(
                           color: Colors.red,
-                          fontSize: 50,
+                          fontSize: 55,
                           fontWeight: FontWeight.w900,
                         ),
                       ),
@@ -179,7 +180,7 @@ class HomePage extends StatelessWidget {
                     child: SizedBox(
                         width: double.infinity,
                         child: Text(
-                          'CodeLoom, your comprehensive Flutter app hub, offers a treasure trove of handwritten notes covering a myriad of programming languages including C, C++, Java, Python, HTML, CSS, JavaScript, Android Studio, and Data Structures & Algorithms (DSA). Dive into a vast library of PDF books encompassing Java, Python programming, Android programming, DSA, coding interviews, and Grokking algorithms. Elevate your skills with expert-led courses spanning Cyber security, Java development, Python development, AR/VR, and more. Whether you\'re a beginner or a seasoned developer, CodeLoom equips you with the tools and resources to excel in the dynamic world of software development.',
+                          'CodeLoom is your one-stop shop. Lots of handwritten notes covering many different programming languages are available. Explore a vast library of books in PDF format that comprise. To progress your career, No matter your degree of expertise, CodeLoom provides you with the tools and resources you need to thrive in the quick-paced world of software development.',
                           style: TextStyle(color: Colors.white, fontSize: 14),
                         )),
                   ),
@@ -229,45 +230,38 @@ class HomePage extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  padding: const EdgeInsets.only(top: 20, bottom: 15),
-                  height: 250,
-                  width: 200,
-                  decoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        child:
-                            Image.asset('assets/images/logoImages/python.webp'),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Text(
-                        'Python Notes',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const Text('See Notes Here'),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const PythonPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined))
-                    ],
+                GestureDetector(
+                  onTap: ()=> Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PythonPage())),
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 20, bottom: 15),
+                    height: 250,
+                    width: 200,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[900],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CircleAvatar(
+                          radius: 70,
+                          child:
+                              Image.asset('assets/images/logoImages/python.webp'),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'Python Notes',
+                          style: TextStyle(
+                            color: Colors.white,
+                              fontSize: 20, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Container(
@@ -275,39 +269,33 @@ class HomePage extends StatelessWidget {
                   height: 250,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[200],
+                    color: Colors.grey[900],
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      CircleAvatar(
-                        radius: 40,
-                        child: Image.asset('assets/images/logoImages/c.webp'),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      const Text(
-                        'C Notes',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const Text('See Notes Here'),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => const CPage()));
-                          },
-                          icon: const Icon(Icons.arrow_forward_outlined))
-                    ],
+                  child: GestureDetector(
+                    onTap: ()=>Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CPage())),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        CircleAvatar(
+                          radius: 70,
+                          child: Image.asset('assets/images/logoImages/c.webp'),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                        const Text(
+                          'C Notes',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20, fontWeight: FontWeight.w600),
+                        ),
+
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -351,7 +339,8 @@ class HomePage extends StatelessWidget {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.white,
+                    border: Border.all(color: Colors.black,width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -374,7 +363,8 @@ class HomePage extends StatelessWidget {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.white,
+                    border: Border.all(color: Colors.black,width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Column(
@@ -434,35 +424,29 @@ class HomePage extends StatelessWidget {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.white,
+                    border: Border.all(color: Colors.black,width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                          child: Image.asset(
-                              'assets/images/courseImages/neur.png')),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                        'Neural Network',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {},
-                          icon: const Icon(Icons.arrow_forward_outlined)),
-                    ],
+                  child: GestureDetector(
+                  onTap: (){},
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                            child: Image.asset(
+                                'assets/images/courseImages/neur.png')),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          'Neural Network',
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w600),
+                        ),
+
+                      ],
+                    ),
                   ),
                 ),
                 Container(
@@ -470,35 +454,28 @@ class HomePage extends StatelessWidget {
                   height: 300,
                   width: 200,
                   decoration: BoxDecoration(
-                    color: Colors.grey[100],
+                    color: Colors.white,
+                    border: Border.all(color: Colors.black,width: 2),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                          child: Image.asset(
-                              'assets/images/courseImages/python.png')),
-                      const SizedBox(
-                        height: 5,
-                      ),
-                      const Text(
-                        '      Python\n Programming ',
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.w600),
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      IconButton(
-                          iconSize: 30,
-                          style: IconButton.styleFrom(
-                            backgroundColor: Colors.grey[600],
-                          ),
-                          color: Colors.white,
-                          onPressed: () {},
-                          icon: const Icon(Icons.arrow_forward_outlined)),
-                    ],
+                  child: GestureDetector(
+                    onTap: (){},
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Expanded(
+                            child: Image.asset(
+                                'assets/images/courseImages/python.png')),
+                        const SizedBox(
+                          height: 5,
+                        ),
+                        const Text(
+                          '      Python\n Programming ',
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -529,6 +506,7 @@ class HomePage extends StatelessWidget {
             height: 20,
           ),
           Container(
+            width: 100,
             margin: EdgeInsets.symmetric(vertical: 5.0),
             decoration: BoxDecoration(
                 color: Colors.grey[700],

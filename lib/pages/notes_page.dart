@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:pdf_notes_app/components/notesLink/android_page.dart';
 import 'package:pdf_notes_app/components/notesLink/c_page.dart';
 import 'package:pdf_notes_app/components/notesLink/dsa_page.dart';
@@ -132,6 +134,7 @@ class _NotesPageState extends State<NotesPage> {
               ],
             ),
           ),
+          // ---------------------------BODY-----------------------------------------------------------------
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 5.0),
             child: Divider(
@@ -176,90 +179,72 @@ class _NotesPageState extends State<NotesPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          padding: const EdgeInsets.only(top: 20, bottom: 15),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                child: Image.asset(
-                                    'assets/images/logoImages/python.webp'),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              const Text(
-                                'Python Notes',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                              const Text('See Notes Here'),
-                              IconButton(
-                                  iconSize: 40,
-                                  style: IconButton.styleFrom(
-                                    backgroundColor: Colors.grey[600],
-                                  ),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const PythonPage()));
-                                  },
-                                  icon:
-                                      const Icon(Icons.arrow_forward_outlined)),
-                            ],
+                        GestureDetector(
+                          onTap: () => Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const PythonPage())),
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 20, bottom: 15),
+                            height: 250,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                CircleAvatar(
+                                  radius: 70,
+                                  child: Image.asset(
+                                      'assets/images/logoImages/python.webp'),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'Python Notes',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        Container(
-                          padding: const EdgeInsets.only(top: 20, bottom: 15),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                child: Image.asset(
-                                    'assets/images/logoImages/c.webp'),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              const Text(
-                                'C Notes',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                              const Text('See Notes Here'),
-                              IconButton(
-                                  iconSize: 40,
-                                  style: IconButton.styleFrom(
-                                    backgroundColor: Colors.grey[600],
-                                  ),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const CPage()));
-                                  },
-                                  icon:
-                                      const Icon(Icons.arrow_forward_outlined))
-                            ],
+                        GestureDetector(
+                          onTap: () => Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => CPage())),
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 20, bottom: 15),
+                            height: 300,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[300],
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                CircleAvatar(
+                                  radius: 70,
+                                  child: Image.asset(
+                                      'assets/images/logoImages/c.webp'),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'C Notes',
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -270,90 +255,76 @@ class _NotesPageState extends State<NotesPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          padding: const EdgeInsets.only(top: 20, bottom: 15),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                child: Image.asset(
-                                    'assets/images/logoImages/android.webp'),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              const Text(
-                                'Android Notes',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                              const Text('See Notes Here'),
-                              IconButton(
-                                  iconSize: 40,
-                                  style: IconButton.styleFrom(
-                                    backgroundColor: Colors.grey[600],
-                                  ),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const AndroidPage()));
-                                  },
-                                  icon:
-                                      const Icon(Icons.arrow_forward_outlined))
-                            ],
+                        GestureDetector(
+                          onTap: ()=> Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                  const AndroidPage())),
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 20, bottom: 15),
+                            height: 300,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[300],
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                CircleAvatar(
+                                  radius: 70,
+                                  child: Image.asset(
+                                      'assets/images/logoImages/android.webp'),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'Android Notes',
+                                  style: TextStyle(
+                                      fontSize: 20, fontWeight: FontWeight.w600),
+                                ),
+
+                              ],
+                            ),
                           ),
                         ),
-                        Container(
-                          padding: const EdgeInsets.only(top: 20, bottom: 15),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                child: Image.asset(
-                                    'assets/images/logoImages/java.webp'),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              const Text(
-                                'Java Notes',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                              const Text('See Notes Here'),
-                              IconButton(
-                                  iconSize: 40,
-                                  style: IconButton.styleFrom(
-                                    backgroundColor: Colors.grey[600],
-                                  ),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const JavaPage()));
-                                  },
-                                  icon:
-                                      const Icon(Icons.arrow_forward_outlined))
-                            ],
+                        GestureDetector(
+                          onTap: ()=>Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                  const JavaPage())),
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 20, bottom: 15),
+                            height: 250,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                CircleAvatar(
+                                  radius: 70,
+                                  child: Image.asset(
+                                      'assets/images/logoImages/java.webp'),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'Java Notes',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                      fontSize: 20, fontWeight: FontWeight.w600),
+                                ),
+
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -364,90 +335,76 @@ class _NotesPageState extends State<NotesPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          padding: const EdgeInsets.only(top: 20, bottom: 15),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                child: Image.asset(
-                                    'assets/images/logoImages/html.webp'),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              const Text(
-                                'HTML Notes',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                              const Text('See Notes Here'),
-                              IconButton(
-                                  iconSize: 40,
-                                  style: IconButton.styleFrom(
-                                    backgroundColor: Colors.grey[600],
-                                  ),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const HtmlPage()));
-                                  },
-                                  icon:
-                                      const Icon(Icons.arrow_forward_outlined))
-                            ],
+                        GestureDetector(
+                          onTap: ()=>Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                  const HtmlPage())),
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 20, bottom: 15),
+                            height: 250,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                CircleAvatar(
+                                  radius: 70,
+                                  child: Image.asset(
+                                      'assets/images/logoImages/html.webp'),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'HTML Notes',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                      fontSize: 20, fontWeight: FontWeight.w600),
+                                ),
+
+                              ],
+                            ),
                           ),
                         ),
-                        Container(
-                          padding: const EdgeInsets.only(top: 20, bottom: 15),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                child: Image.asset(
-                                    'assets/images/logoImages/css.webp'),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              const Text(
-                                'CSS Notes',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                              const Text('See Notes Here'),
-                              IconButton(
-                                  iconSize: 40,
-                                  style: IconButton.styleFrom(
-                                    backgroundColor: Colors.grey[600],
-                                  ),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const CssPage()));
-                                  },
-                                  icon:
-                                      const Icon(Icons.arrow_forward_outlined))
-                            ],
+                        GestureDetector(
+                          onTap: ()=> Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                  const CssPage())),
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 20, bottom: 15),
+                            height: 300,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[300],
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                CircleAvatar(
+                                  radius: 70,
+                                  child: Image.asset(
+                                      'assets/images/logoImages/css.webp'),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'CSS Notes',
+                                  style: TextStyle(
+                                      fontSize: 20, fontWeight: FontWeight.w600),
+                                ),
+
+                              ],
+                            ),
                           ),
                         ),
                       ],
@@ -458,90 +415,76 @@ class _NotesPageState extends State<NotesPage> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Container(
-                          padding: const EdgeInsets.only(top: 20, bottom: 15),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                child: Image.asset(
-                                    'assets/images/logoImages/js.webp'),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              const Text(
-                                'JS Notes',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                              const Text('See Notes Here'),
-                              IconButton(
-                                  iconSize: 40,
-                                  style: IconButton.styleFrom(
-                                    backgroundColor: Colors.grey[600],
-                                  ),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const JSPage()));
-                                  },
-                                  icon:
-                                      const Icon(Icons.arrow_forward_outlined))
-                            ],
+                        GestureDetector(
+                          onTap: ()=>Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                  const JSPage())),
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 20, bottom: 15),
+                            height: 300,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.grey[300],
+                              border: Border.all(color: Colors.black),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                CircleAvatar(
+                                  radius: 70,
+                                  child: Image.asset(
+                                      'assets/images/logoImages/js.webp'),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'JS Notes',
+                                  style: TextStyle(
+                                      fontSize: 20, fontWeight: FontWeight.w600),
+                                ),
+
+                              ],
+                            ),
                           ),
                         ),
-                        Container(
-                          padding: const EdgeInsets.only(top: 20, bottom: 15),
-                          height: 300,
-                          width: 200,
-                          decoration: BoxDecoration(
-                            color: Colors.grey[200],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              CircleAvatar(
-                                radius: 50,
-                                child: Image.asset(
-                                    'assets/images/logoImages/dsa.webp'),
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              const Text(
-                                'DSA Notes',
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.w600),
-                              ),
-                              const Text('See Notes Here'),
-                              IconButton(
-                                  iconSize: 40,
-                                  style: IconButton.styleFrom(
-                                    backgroundColor: Colors.grey[600],
-                                  ),
-                                  color: Colors.white,
-                                  onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) =>
-                                                const DSAPage()));
-                                  },
-                                  icon:
-                                      const Icon(Icons.arrow_forward_outlined))
-                            ],
+                        GestureDetector(
+                          onTap: ()=>Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) =>
+                                  const DSAPage())),
+                          child: Container(
+                            padding: const EdgeInsets.only(top: 20, bottom: 15),
+                            height: 250,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: Colors.black,
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceAround,
+                              children: [
+                                CircleAvatar(
+                                  radius: 70,
+                                  child: Image.asset(
+                                      'assets/images/logoImages/dsa.webp'),
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                const Text(
+                                  'DSA Notes',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                      fontSize: 20, fontWeight: FontWeight.w600),
+                                ),
+
+                              ],
+                            ),
                           ),
                         ),
                       ],
