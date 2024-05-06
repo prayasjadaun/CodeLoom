@@ -35,11 +35,11 @@ class _IntroPageState extends State<IntroPage> {
                 height: 40,
               ),
               const Text(
-                'Welcome To CodeLoom',
+                'Explore',
                 style: TextStyle(
                     color: Colors.deepPurple,
-                    fontSize: 25,
-                    fontWeight: FontWeight.w900),
+                    fontSize: 30,
+                    fontWeight: FontWeight.w800),
               ),
               const SizedBox(
                 height: 10,
@@ -48,7 +48,7 @@ class _IntroPageState extends State<IntroPage> {
                 'Your Library App',
                 style: TextStyle(
                     color: Colors.deepPurple,
-                    fontSize: 25,
+                    fontSize: 30,
                     fontWeight: FontWeight.w200),
               ),
               const SizedBox(
@@ -58,8 +58,9 @@ class _IntroPageState extends State<IntroPage> {
                 onTap: () => Navigator.pushReplacement(context,
                     MaterialPageRoute(builder: (context) => const HomePage())),
                 child: Container(
+                  width: 200,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(40),
                       color: Colors.deepPurple),
                   padding: const EdgeInsets.all(18),
                   child: Center(
@@ -72,7 +73,7 @@ class _IntroPageState extends State<IntroPage> {
                     ),
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),

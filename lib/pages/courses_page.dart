@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:pdf_notes_app/pages/books_page.dart';
+import 'package:pdf_notes_app/pages/notes_page.dart';
+
 
 import 'home_page.dart';
 
@@ -44,7 +47,7 @@ class CoursesPage extends StatelessWidget {
               ),
             ],
           )),
-      body: Center(child: Text('Under Construction.....', style: TextStyle(color: Colors.black, fontSize: 30),)),
+      body:Center(child: Text('Under Construction'))
     );
   }
 }
